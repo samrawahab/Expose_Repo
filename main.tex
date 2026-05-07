@@ -1,7 +1,8 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass{article}
 
 % Pakete
 \usepackage[utf8]{inputenc}
+\usepackage{bookmark}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 \usepackage{geometry}
@@ -13,7 +14,7 @@
 
 \title{%
     Exposé der Bachelorarbeit\\[1em]
-    \large Titel der Arbeit hier einfügen
+    \large Range Minimum Queries in multiple dimensions
 }
 
 \author{%
@@ -34,6 +35,7 @@
 % - Worum geht es?
 % - Warum ist das Thema relevant?
 % - In welchem Kontext steht es?
+Was ist die Problemstellung, welche Varianten gibt es, wie funktioniert der Algo?
 
 \section{Ziel der Arbeit}
 % Was willst du erreichen?
@@ -59,19 +61,44 @@
 
 \section{Geplanter Aufbau der Arbeit}
 \begin{enumerate}
-    \item Einleitung
-    \item Grundlagen
-    \item ...
-    \item Fazit
+    \item Introduction
+    \item Fundamentals 
+        \begin{enumerate}
+            \item Introduce 1D-RMQ using LCA as well as the direct approach
+            \item Problem defintion and further definitions
+            \item Show the limitation of using cartesian trees to solve 2D-RMQ problem
+        \end{enumerate}
+    \item Naive and Previous Approaches
+        \begin{enumerate}
+        \item A naive approach and alaysis of it
+        \item Papers that come before this
+        \end{enumerate}
+    \item $\langle O(n^d), O(1) \rangle$ Approach
+        \begin{enumerate}
+            \item Yuan's paper: Detailed shwoing of methodolgy and proofs
+            \item Thus we have a linear preprocessing and constant querying time algorithm, similar to the 1D-RMQ case
+            \item Analysis
+        \end{enumerate}
+    \item Extension to Symmetric Queries
+        \begin{enumerate}
+            \item Problem Reformulation 
+            \item Challenges
+            \item Proposed solution
+            \item Analysis and conclusion of solution, whether it brings any improvements
+        \end{enumerate}
+    \item Further Developments and Applications
+    \item Discussion
+    \item Conclusion
 \end{enumerate}
 
-\section{Zeitplan}
+\section{Plan}
 \begin{tabular}{ll}
-Woche 1--2 & Literaturrecherche \\
-Woche 3--4 & Grundlagen \\
-Woche 5--7 & Hauptteil \\
-Woche 8--10 & Analyse / Implementierung \\
-Woche 11--12 & Schreiben und Korrektur \\
+Week 1 & Research \\
+Week 2--3 & Fundamentals \\
+Week 4--5 & Yuan \\
+Week 6--7 & Extension to Symmetric Queries \\
+Week 8--10 & Further developments, discussion and conclusion \\
+Week 10--12 & Korrektur, feinschliff \\
 \end{tabular}
 
 \section{Literatur}
